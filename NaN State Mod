@@ -1,0 +1,28 @@
+(function () {
+  let old = globalThis.sdk_runtime;
+  c2_callFunction("execCode", ["globalThis.sdk_runtime = this.runtime"]);
+  let runtime = globalThis.sdk_runtime;
+  globalThis.sdk_runtime = old;
+
+  let notify = (text, title = "nah jit trippin", image = "./speedrunner.png") => {
+    cr.plugins_.sirg_notifications.prototype.acts.AddSimpleNotification.call(
+      runtime.types_by_index.find(
+        (type) => type.plugin instanceof cr.plugins_.sirg_notifications
+      ).instances[0],
+      title,
+      text,
+      image
+    );
+  };
+
+  notify(
+    "Press O, then set the timescale to a number.",
+    "NaN State Mod loaded"
+  );
+  document.addEventListener("keydown", (event) => {
+    if (event.code === "KeyA") {
+      ovoTasTools.timescale = p
+        notify("NaN State Activated");
+    }
+  });
+})();
