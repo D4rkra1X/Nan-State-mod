@@ -20,7 +20,7 @@
     "NaN State Mod loaded"
   );
   document.addEventListener("keydown", (event) => {
-    if (event.code === "KeyO") {
+    if (event.code === "KeyH") {
       ovoTasTools.timescale = p
         notify("NaN State Activated");
     }
